@@ -40,12 +40,16 @@ function Navbar() {
           MyApp
         </motion.div>
 
-        <motion.ul
-          variants={menuVariants}
-          initial="hidden"
-          animate="visible"
-          className="hidden md:flex space-x-10 bg-gray-50 px-10 py-3 rounded-full shadow absolute left-1/2 transform -translate-x-1/2"
-        >
+    <motion.ul
+  variants={menuVariants}
+  initial="hidden"
+  animate="visible"
+  className="hidden md:flex space-x-10 
+             bg-white/10 backdrop-blur-md 
+             px-10 py-3 rounded-full 
+             shadow-sm border border-white/20 
+              left-1/2 transform -translate-x-1/2 fixed z-20"
+>
           {["Home", "About", "Services", "Blog", "Contact"].map((item) => (
             <motion.li
               key={item}

@@ -120,3 +120,22 @@
     @apply bg-background text-foreground;
   }
 }
+
+.stroke-\[1\.5px\] {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.4px;
+}
+.text-transparent {
+  color: transparent;
+}
+
+
+.custom-dotted-button {
+  background-image: linear-gradient(to right, #333 2px, transparent 4px); /* Dot color, dot size, transparent gap size */
+  background-size: 6px 100%; /* Total pattern width (dot + gap), full height */
+  background-repeat: repeat-x; /* Repeat horizontally */
+  border: none; /* Remove default border */
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
