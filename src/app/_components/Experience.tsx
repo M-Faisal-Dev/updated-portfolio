@@ -105,7 +105,7 @@ const ExperienceCard = ({ experience, index }) => {
       className="group"
     >
       <div 
-        className="bg-white dark:bg-gray-800 rounded-xl border border-gray-300 dark:border-gray-700 hover:border-black dark:hover:border-white transition-all duration-300 shadow-sm hover:shadow-lg overflow-hidden cursor-pointer"
+        className="bg-white dark:bg-gray-800 rounded-xl border border-gray-400 border-dashed dark:border-gray-700 hover:border-black dark:hover:border-white transition-all duration-300 shadow-sm hover:shadow-lg overflow-hidden cursor-pointer"
         onClick={() => setIsExpanded(!isExpanded)}
       >
         {/* Header Section */}
@@ -210,7 +210,7 @@ const AnimationComponent = () => {
       viewport={{ once: true }}
       className="sticky top-24"
     >
-      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-300 dark:border-gray-700 p-8 shadow-lg">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-dashed border-gray-400 dark:border-gray-700 p-8 shadow-lg">
         {/* Animated Coding Elements */}
         <div className="text-center mb-6">
           <h3 className="text-xl font-semibold text-black dark:text-white mb-2">

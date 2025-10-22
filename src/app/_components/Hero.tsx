@@ -7,11 +7,8 @@ import ExperienceStat from "@/components/ui/ExperienceStat";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between px-5 md:px-12 py-20 bg-white overflow-hidden">
-      {/* Animated Background */}
- 
-      {/* 2nd Animated Background */}
-{/* <div className="absolute inset-0 z-0 overflow-hidden">
+    <>
+    <div className="absolute inset-0 z-0 overflow-hidden">
 
   <motion.div
     className="absolute top-10 left-10 w-2 h-2 bg-gray-300 rounded-full"
@@ -52,63 +49,7 @@ export default function Hero() {
     }}
   />
   
-  <div className="absolute inset-0 opacity-5">
-    <motion.div
-      className="absolute top-10 left-10 font-mono text-xs text-black"
-      animate={{ opacity: [0, 0.7, 0] }}
-      transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-    >
-      {`function animate() {\n  return "Hello World";\n}`}
-    </motion.div>
-    <motion.div
-      className="absolute top-20 right-10 font-mono text-xs text-black"
-      animate={{ opacity: [0, 0.5, 0] }}
-      transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-    >
-      {`const data = {\n  name: "Developer",\n  skills: ["JS", "React"]\n}`}
-    </motion.div>
-    <motion.div
-      className="absolute bottom-20 left-10 font-mono text-xs text-black"
-      animate={{ opacity: [0, 0.6, 0] }}
-      transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 4 }}
-    >
-      {`import React from 'react';\n\nexport default function App() {\n  return <div>Hello</div>;\n}`}
-    </motion.div>
 
-    <motion.div
-      className="absolute bottom-10 right-10 font-mono text-xs text-black"
-      animate={{ opacity: [0, 0.4, 0] }}
-      transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-    >
-      {`// Coding is fun\nconsole.log("Build amazing things");`}
-    </motion.div>
-
-    <motion.div
-      className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-mono text-sm text-black text-center"
-      animate={{ opacity: [0, 0.3, 0] }}
-      transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-    >
-      {`<Code>\n  <Create/>\n  <Innovate/>\n</Code>`}
-    </motion.div>
-  </div>
-
-  <div className="absolute inset-0">
-    <motion.div
-      className="absolute top-1/3 left-0 right-0 font-mono text-xs text-gray-400 whitespace-nowrap"
-      animate={{ x: [0, -100, 0] }}
-      transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-    >
-      {`const project = new Project(); project.build(); project.deploy(); `.repeat(10)}
-    </motion.div>
-
-    <motion.div
-      className="absolute top-2/3 left-0 right-0 font-mono text-xs text-gray-400 whitespace-nowrap"
-      animate={{ x: [-100, 0, -100] }}
-      transition={{ duration: 12, repeat: Infinity, ease: "linear", delay: 3 }}
-    >
-      {`function createAmazingThings() { return "Success"; } `.repeat(10)}
-    </motion.div>
-  </div>
   <div className="absolute inset-0 opacity-10">
     <motion.div
       className="absolute left-0 top-0 h-full w-px bg-black"
@@ -143,7 +84,18 @@ export default function Hero() {
       ease: "easeInOut",
     }}
   />
-</div> */}
+</div> 
+   
+
+<div className="max-w-7xl mx-auto relative">
+
+    <section className="relative flex flex-col md:flex-row items-center justify-between px-5 md:px-12 py-20 bg-white overflow-hidden">
+      {/* Animated Background */}
+ 
+  
+ 
+
+
 
 
     <motion.div
@@ -297,7 +249,7 @@ export default function Hero() {
     viewBox="0 0 200 200"
     animate={{ rotate: 360 }}
     transition={{
-      duration: 10,
+      duration: 20,
       repeat: Infinity,
       ease: "linear",
     }}
@@ -309,7 +261,7 @@ export default function Hero() {
       fill="none"
       stroke="#111827"
       strokeWidth="0.5"
-      strokeDasharray="2 7"  // 👈 ye control karta hai dot aur gap ka distance
+      strokeDasharray="1.5 5"  // 👈 ye control karta hai dot aur gap ka distance
       strokeLinecap="round"
     />
   </motion.svg>
@@ -362,6 +314,9 @@ export default function Hero() {
         </motion.div>
       </motion.div>
     </section>
+    </div>
+     </>
+
   );
 }
 
