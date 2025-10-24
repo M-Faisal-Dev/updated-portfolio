@@ -2,29 +2,38 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink, FiArrowRight } from "react-icons/fi";
+import Image from "next/image";
 
 // data/projects.js
 const projectsData = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with React, Node.js, and MongoDB. Features user authentication, payment integration, and admin dashboard.",
-    image: "/projects/ecommerce.jpg",
-    technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-    githubLink: "https://github.com/username/ecommerce",
-    liveLink: "https://ecommerce-demo.com",
-    category: "Full Stack"
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, drag-drop functionality, and team collaboration features.",
-    image: "/projects/taskapp.jpg",
-    technologies: ["React", "Firebase", "Tailwind CSS", "Context API"],
-    githubLink: "https://github.com/username/taskapp",
-    liveLink: "https://taskapp-demo.com",
-    category: "Frontend"
-  },
+{
+  id: 1,
+  title: "Webfix — Digital Solutions Company",
+  description: "Developed Webfix from scratch using modern technologies with a focus on performance and user experience. Webfix is a service-based platform offering Web & App Development, SaaS, UI/UX, SEO, and AI solutions — along with an AI-powered web metrics tool for performance and SEO analysis.",
+  image: "/Webfix.png",
+ technologies: [
+  "Next.js",
+  "Node.js",
+  "MongoDB",
+  "Tailwind CSS",
+  "GPT API",
+  "Google PageSpeed Insights API"
+],
+
+  githubLink: "https://github.com/username/webfix",
+  liveLink: "https://webfix.com",
+  category: "Full Stack"
+},
+ {
+  id: 2,
+  title: "MediSaver — Smart Health Records App",
+  description: "Built MediSaver’s landing page and admin dashboard with full-stack functionality. It’s a digital health platform offering AI-powered insights, smart reminders, and secure medical records management.",
+  image: "/medisaver.png",
+  technologies: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS", "AI Tools", "Cloud Storage"],
+  githubLink: "https://github.com/username/medisaver",
+  liveLink: "https://medisaver.com",
+  category: "Full Stack"
+},
   {
     id: 3,
     title: "Weather Dashboard",
@@ -301,7 +310,7 @@ const ProjectCard = ({ project, index }) => {
         />
 
         {/* Project Image */}
-        <div className="relative h-48 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-600 dark:to-gray-700 overflow-hidden">
+        <div className="relative h-60 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-600 dark:to-gray-700 overflow-hidden">
           {/* Animated Background Pattern */}
           <motion.div
             className="absolute inset-0 opacity-10"
@@ -320,13 +329,14 @@ const ProjectCard = ({ project, index }) => {
           />
           
           <div className="absolute inset-0 flex items-center justify-center">
-            <motion.span
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="text-5xl text-gray-400 dark:text-gray-500"
-            >
-              📁
-            </motion.span>
+             <Image
+          width={400}
+          height={400}
+          src={project.image}
+          alt="Muhammad Faisal - Full Stack Developer"
+          className="w-full h-full object-cover"
+          priority
+        />
           </div>
 
           {/* Project Links */}
@@ -417,7 +427,7 @@ const ProjectCard = ({ project, index }) => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors flex-1 justify-center py-2.5 border-2 border-gray-300 dark:border-gray-600 rounded-xl hover:border-black dark:hover:border-white bg-white dark:bg-gray-800 shadow-sm hover:shadow-md"
+              className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors flex-1 justify-center py-2.5 border-1 border-gray-300 dark:border-gray-600 rounded-xl hover:border-black dark:hover:border-white bg-white dark:bg-gray-800 shadow-sm hover:shadow-md"
             >
               <FiGithub />
               Code
@@ -428,7 +438,7 @@ const ProjectCard = ({ project, index }) => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors flex-1 justify-center py-2.5 border-2 border-gray-300 dark:border-gray-600 rounded-xl hover:border-black dark:hover:border-white bg-white dark:bg-gray-800 shadow-sm hover:shadow-md"
+              className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors flex-1 justify-center py-2.5 border-1 border-gray-300 dark:border-gray-600 rounded-xl hover:border-black dark:hover:border-white bg-white dark:bg-gray-800 shadow-sm hover:shadow-md"
             >
               <FiExternalLink />
               Demo
