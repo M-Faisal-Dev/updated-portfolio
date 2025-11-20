@@ -54,12 +54,12 @@ const FloatingSocialIcons = () => {
 
   return (
     <motion.div
-      className="fixed left-6 top-1/2 transform -translate-y-1/2 z-50 hidden lg:flex flex-col items-center space-y-4"
+      className="fixed 2xl:left-6 left-0 top-1/2 transform -translate-y-1/2 z-50 hidden lg:flex flex-col items-center space-y-4"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="flex flex-col items-center border-dashed space-y-4 p-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg">
+      <div className="flex flex-col items-center border-dashed space-y-4 2xl:p-4 p-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg">
         {socialLinks.map((social, index) => (
           <motion.a
             key={social.label}

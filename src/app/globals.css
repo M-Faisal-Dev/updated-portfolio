@@ -41,6 +41,17 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  
+}
+
+
+/* Define spacing base */
+@theme {
+  --container-8xl: 88rem;
+  
+
+ --max-w-7xl: var(--container-8xl) /* 80rem = 1280px */;
+
 }
 
 :root {

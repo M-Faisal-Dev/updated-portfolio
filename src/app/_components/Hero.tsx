@@ -11,7 +11,7 @@ export default function Hero() {
     <div className="absolute inset-0 z-0 overflow-hidden">
 
   <motion.div
-    className="absolute top-10 left-10 w-2 h-2 bg-gray-300 rounded-full"
+    className="absolute top-10 left-10 w-3 h-3 bg-gray-300 rounded-full"
     animate={{
       y: [0, -20, 0],
       opacity: [0.5, 1, 0.5],
@@ -23,7 +23,7 @@ export default function Hero() {
     }}
   />
   <motion.div
-    className="absolute top-1/4 right-20 w-3 h-3 bg-gray-400 rounded-full"
+    className="absolute top-1/4 right-20 w-5 h-5 bg-gray-400 rounded-full"
     animate={{
       y: [0, 30, 0],
       opacity: [0.3, 0.8, 0.3],
@@ -70,6 +70,7 @@ export default function Hero() {
       transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 4 }}
       style={{ originY: 0 }}
     />
+    
   </div>
 
   <motion.div
@@ -87,55 +88,48 @@ export default function Hero() {
 </div> 
    
 
-<div className="max-w-7xl mx-auto relative">
+<div className="px-6 md:px-16 bg-white dark:bg-gray-900">
 
-    <section className="relative flex flex-col md:flex-row items-center justify-between px-5 md:px-12 py-20 bg-white overflow-hidden">
+    <section className="max-w-7xl mx-auto">
       {/* Animated Background */}
- 
+ <div className="relative flex flex-col md:flex-row items-center justify-between py-20 overflow-hidden">
   
- 
-
-
-
-
     <motion.div
         initial={{ opacity: 0, x: -60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: easeOut }}
         className="md:w-1/2 text-center md:text-left z-10"
       >
-        <motion.h1
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
-          initial={{ y: 40, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: easeOut }}
-        >
-          Hi, I'm{" "}
-         <span className="bg-gradient-to-r from-gray-900 via-gray-500 to-gray-800 bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient">
-  M.Faisal
-</span>
+<motion.h1
+  className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
+  initial={{ y: 40, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.8, delay: 0.2, ease: easeOut }}
+>
+  Hi, I'm{" "}
+  <span className="bg-gradient-to-r from-gray-900 via-gray-500 to-gray-800 bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient">
+    M.Faisal
+  </span>
+</motion.h1>
 
-        </motion.h1>
 
         <motion.div
-          className="text-2xl md:text-3xl font-semibold text-gray-800 mt-4"
+          className="text-2xl md:text-3xl font-semibold text-gray-900 mt-4"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3, ease: easeOut }}
         >
-         Full Stack Web & Mobile Developer | AI Agent Engineer with DevOps Expertise
+         Full Stack Developer (Web & Mobile) | Cloud & DevOps Specialist
         </motion.div>
 
         <motion.p
-          className="text-gray-800 mt-6 text-lg leading-relaxed max-w-2xl"
+          className="text-gray-800 mt-6 2xl:text-lg text-base font-normal leading-relaxed max-w-2xl"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4, ease: easeOut }}
         >
-          I specialize in building scalable web applications using the MERN stack 
-          and implementing robust DevOps solutions. Passionate about creating 
-          efficient, user-friendly applications with modern technologies and 
-          best practices.
+         I'm a Full-Stack Developer with 3 years of experience building web and mobile applications. I specialize in the MERN stack and AWS cloud infrastructure with DevOps expertise. I'm currently exploring AI agent development and experimenting with automation and smart solutions.
+I focus on building practical, clean, and scalable solutions that solve real-world problems, streamline processes, and drive meaningful impact for users and businesses.
         </motion.p>
 
         {/* CTA Buttons with Border Animation */}
@@ -146,24 +140,25 @@ export default function Hero() {
   transition={{ duration: 0.8, delay: 0.6, ease: easeOut }}
 >
   {/* First Button - Get In Touch */}
-<div className="relative group flex items-center gap-2">
-  {/* Subtle Glow */}
-  <div className="absolute -inset-0.5 bg-gray-900 rounded-full opacity-50 group-hover:opacity-100 transition duration-400 blur-sm"></div>
-
-  <button
-    className="relative flex items-center justify-center py-3 px-6 bg-gray-900 hover:bg-gray-900 text-white rounded-full transition-all duration-400 border border-gray-800"
+<div className="relative flex items-center gap-2">
+  <motion.button
+    whileHover={{
+      scale: 1.02,           
+    }}
+    whileTap={{ scale: 0.25 }} // click effect
+    className="relative flex items-center justify-center py-3 px-6 bg-gray-900 text-white rounded-full border border-gray-800 transition-all duration-300"
   >
-    <span className="transition-all duration-300 group-hover:text-gray-100">
+    <span className="transition-all duration-300">
       Get In Touch
     </span>
     <motion.span
       animate={{ x: [0, 4, 0] }}
       transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-      className="ml-2 group-hover:text-gray-300 transition-colors duration-300"
+      className="ml-2 transition-colors duration-300"
     >
       →
     </motion.span>
-  </button>
+  </motion.button>
 </div>
 
   {/* Second Button - View Projects */}
@@ -313,7 +308,9 @@ export default function Hero() {
 
         </motion.div>
       </motion.div>
+      </div>
     </section>
+    
     </div>
      </>
 
